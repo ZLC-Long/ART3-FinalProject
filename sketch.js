@@ -7,9 +7,12 @@ var radiusHigh = 10;
 var rangeLow = .5;
 var rangeHigh = 1;
 
+let bgsound;
 
 function preload(){
 	img = loadImage("covid.jpg");
+
+	bgsound = loadSound('bgsound.mp3');
 }
 
 function setup() {
@@ -21,13 +24,12 @@ function setup() {
 	textAlign(CENTER);
 	text("Click and hold here!!", width/2, height/2);
 
+	//bg music;
+	bgsound.loop();
 
 }
 
 function draw(){
-
-	//var c = color(img.get(current.location.x, current.location.y));
-	//var greyscale = round(red(c) * 0.222 + green(c) * 0.707 + blue(c) * 0.071);
 
 	for (var i = 0; i < balls.length; i++){
 			balls[i].draw();
